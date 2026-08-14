@@ -1,0 +1,14 @@
+{
+  "name": "Cineby Extensions",
+  "description": "Official community scrapers for CinebyTV",
+  "version": "1.0.0",
+  "plugins": [
+    {
+      "id": "vidsrc",
+      "name": "VidSrc",
+      "version": "1.0.0",
+      "file": "vidsrc.js",
+      "status": "working"
+    }
+  ]
+}
