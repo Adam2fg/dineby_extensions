@@ -52,8 +52,9 @@ async function getStream(imdbId) {
             }
         }
 
-        // If both fail, return an error
-        return JSON.stringify({ error: "Could not find a valid .m3u8 stream. Sites might be using Cloudflare or obfuscation." });
+        // If both fail, return an error with a snippet of the HTML for debugging
+        const debugSnippet = vidsrcHtml.substring(0, 200).replace(/\n/g, ' ');
+        return JSON.stringify({ error: `No m3u8 found. HTML Snippet: ${debugSnippet}` });
 
     } catch (e) {
         return JSON.stringify({ error: e.toString() });
